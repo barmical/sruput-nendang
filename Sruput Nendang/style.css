@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Megrim&family=Niramit:wght@700&family=Overlock&family=Quicksand:wght@700&family=Rokkitt&family=Thasadith&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #170c49;
+  color: aliceblue;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh 157vh 140vh 30vh;
+  grid-template-areas:
+    "page1"
+    "page2"
+    "page3"
+    "footer";
+}
+
+.logo {
+  width: 5%;
+}
+
+.foto {
+  width: 100%;
+}
+
+/* ----------------------PAGE 1---------------------- */
+
+.head {
+  grid-area: page1;
+  display: grid;
+  background-image: url("img/Mask\ Group.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  right: 0;
+  left: 0;
+  padding: 1%;
+  z-index: 999;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(23, 12, 73, 0.4) 100%
+  );
+}
+
+.hidden-menu {
+  display: none;
+}
+
+.ham-menu {
+  display: none;
+}
+
+.navbar img {
+  width: 5%;
+  height: auto;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+  font-family: Overlock;
+  font-size: 1.6vw;
+  color: #e5e5e5;
+  width: 100%;
+  height: 100px;
+}
+
+li a {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 5em;
+  padding: 0.5em;
+  border-radius: 15px;
+}
+
+li a:hover {
+  color: #fc99bd;
+  transition: all 0.5s;
+}
+
+.title {
+  font-size: 9vw;
+  font-family: Megrim;
+  color: #fc99bd;
+  text-align: center;
+  margin-right: 20%;
+  margin-top: 15%;
+}
+
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: Rokkitt;
+}
+
+.line {
+  text-align: end;
+  margin-left: 5%;
+  font-size: 2vw;
+}
+
+/* ----------------------PAGE 2---------------------- */
+
+.container-profile {
+  grid-area: page2;
+  display: grid;
+  height: 157vh;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "marlo"
+    "marco";
+}
+
+.profile-marlo {
+  grid-area: marlo;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "foto1 nama1";
+}
+
+.container-foto1 {
+  grid-area: foto1;
+  display: flex;
+  align-items: center;
+  background-color: rgba(107, 158, 202, 0);
+}
+
+.nama-marlo {
+  grid-area: nama1;
+  background-color: rgba(127, 255, 212, 0);
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 20%;
+}
+
+.nama-marlo h2 {
+  font-size: 7vw;
+  font-family: Niramit;
+  color: #49aea7;
+}
+
+.nama-marlo p {
+  font-size: 3vw;
+  font-family: Thasadith;
+}
+
+.nama-marlo button {
+  width: fit-content;
+  height: auto;
+  padding: 8px;
+  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-color: #8080b0;
+  margin-top: 2%;
+  font-family: Overlock;
+  font-size: 16px;
+}
+
+.profile-marco {
+  grid-area: marco;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "nama2 foto2";
+}
+
+.container-foto2 {
+  grid-area: foto2;
+  display: flex;
+  align-items: center;
+  background-color: rgba(222, 184, 135, 0);
+}
+
+.nama-marco {
+  grid-area: nama2;
+  background-color: rgba(127, 255, 212, 0);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  padding-left: 15%;
+}
+
+.nama-marco h2 {
+  font-size: 7vw;
+  font-family: Niramit;
+  color: #fc99bd;
+}
+
+.nama-marco p {
+  font-size: 3vw;
+  font-family: Thasadith;
+}
+
+.nama-marco button {
+  width: fit-content;
+  height: auto;
+  padding: 8px;
+  box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin-top: 2%;
+  background-color: #8080b0;
+  font-family: Overlock;
+  font-size: 16px;
+}
+
+/* ----------------------PAGE 3---------------------- */
+
+.container-season {
+  display: grid;
+  grid-area: page3;
+  height: 140vh;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "season1"
+    "season2";
+}
+
+.season1 {
+  grid-area: season1;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 0.6fr;
+  grid-template-areas: "album1 season1";
+}
+
+.foto-season1 {
+  grid-area: album1;
+  background-color: rgba(189, 183, 107, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-season1 img {
+  width: 50%;
+  filter: drop-shadow(0px 0px 76px rgba(235, 132, 167, 0.25));
+}
+
+.season1 .s1 {
+  grid-area: season1;
+  font-family: Quicksand;
+  font-size: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  color: #fc99bd;
+  background: linear-gradient(90deg, #170c49 0%, rgba(23, 12, 73, 0) 47.92%),
+    rgba(73, 174, 167, 0.4);
+}
+
+.season2 {
+  grid-area: season2;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.6fr 1fr;
+  grid-template-areas: "season2 album2";
+}
+
+.foto-season2 {
+  grid-area: album2;
+  background-color: rgba(169, 169, 169, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-season2 img {
+  width: 50%;
+  filter: drop-shadow(0px 0px 76px rgba(27, 89, 117, 0.5));
+}
+
+.season2 .s2 {
+  grid-area: season2;
+  font-family: Quicksand;
+  font-size: 6vw;
+  display: flex;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  color: #49aea7;
+  background: linear-gradient(270deg, #170c49 0%, rgba(23, 12, 73, 0) 52.6%),
+    rgba(220, 149, 176, 0.4);
+}
+
+/* ----------------------FOOTER---------------------- */
+
+.footer {
+  background-color: rgba(120, 88, 100, 0);
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.sub-footer {
+  background-color: rgba(109, 105, 107, 0.44);
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1%;
+}
+
+.footer p {
+  font-size: 2.5vw;
+  color: #e5e5e5;
+  font-family: Rokkitt;
+}
+
+.sub-footer img {
+  width: 15%;
+}
+
+/* ----------------------BREAKPOINTS---------------------- */
+
+@media (max-width: 860px) {
+  .head {
+    background: url("img/Mask-Group2.png");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  .title {
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0;
+    height: 10px;
+  }
+  .container {
+    display: grid;
+    grid-template-rows: 80vh 600px 850px 80px;
+    grid-template-areas:
+      "page1"
+      "page2"
+      "page3"
+      "footer";
+  }
+  .head {
+    background: url("img/Mask-Group3.png");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  .head {
+    height: 80vh;
+  }
+
+  .container-profile {
+    height: 600px;
+  }
+
+  .container-season {
+    height: 850px;
+  }
+
+  .footer {
+    height: 80px;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar li {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0;
+    height: 10px;
+    padding-top: 5px;
+  }
+
+  .shown {
+    height: 60px !important;
+  }
+
+  .shown img {
+    width: 7%;
+  }
+
+  .ham-menu {
+    display: flex;
+    margin-left: 50%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 200px 400px 700px 40px;
+    grid-template-areas:
+      "page1"
+      "page2"
+      "page3"
+      "footer";
+  }
+
+  .head {
+    height: 200px;
+    background: none;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    margin-top: 20%;
+  }
+
+  .container-profile {
+    height: 400px;
+  }
+
+  .container-season {
+    height: 700px;
+  }
+
+  .container-season {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .season1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .s1 {
+    margin-top: 5%;
+    background: linear-gradient(180deg, #170c49 0%, rgba(23, 12, 73, 0) 47.92%),
+      rgba(73, 174, 167, 0.4) !important;
+    width: 40% !important;
+    height: 70px !important;
+  }
+
+  .s2 {
+    margin-top: 5%;
+    background: linear-gradient(180deg, #170c49 0%, rgba(23, 12, 73, 0) 47.92%),
+      rgba(73, 174, 167, 0.4) !important;
+    width: 40% !important;
+    height: 70px !important;
+  }
+
+  .season2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .footer {
+    grid-area: footer;
+    height: 40px;
+  }
+}
